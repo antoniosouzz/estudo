@@ -8,8 +8,8 @@ import play.db.jpa.Model;
 public class Produto extends Model{
 
 	public String nome;
-	public Double preco;
-	public int quantidade;
+	public double preco;
+	public Integer quantidade;
 	public String categoria;
 	
 }

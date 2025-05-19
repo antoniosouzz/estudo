@@ -19,11 +19,17 @@ public class Produtos extends Controller{
 			if (i.nome != null) {
 				i.nome = i.nome.toUpperCase();
 		    }
+			if(i.preco != 0){
+				i.preco = i.preco; //Double com "D" maiusulo permite nulo / double com "d" premite nulo
+			}
+			if(i.quantidade != null) {
+				i.quantidade = i.quantidade;  //integer permite o nulo
+			}
+			if(i.categoria != null) {
+				i.categoria = i.categoria;
+			}
 			
-			if (i.preco != null) {
-				   String precoStr = i.preco.toString(); // ou formatar da forma que desejar
-				   // depois use precoStr conforme necessário
-				}
+
 			
 			i.save();
 			listar();
