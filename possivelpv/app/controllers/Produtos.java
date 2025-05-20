@@ -9,7 +9,12 @@ public class Produtos extends Controller{
 	
 	public static void listar() {
 		List<Produto> listadeprodutos = Produto.findAll();
-		render(listadeprodutos);
+		
+		int totalQuantidade = 0;
+		for(Produto p : listadeprodutos) {
+			totalQuantidade += p.quantidade;
+		}
+		render(listadeprodutos,totalQuantidade);
 	}
 	
 	public static void form() {
